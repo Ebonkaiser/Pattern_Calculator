@@ -51,7 +51,7 @@ namespace PatternCalculator.FSM
             }
             else
             {
-                throw new ArgumentException("invalid argument, enter number from menu");
+                throw new ArgumentException("Invalid argument, enter number from menu");
             }
            
             

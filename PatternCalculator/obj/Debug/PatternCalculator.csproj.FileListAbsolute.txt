@@ -4,3 +4,6 @@ c:\users\devinharrison\documents\visual studio 2013\Projects\PatternCalculator\P
 c:\users\devinharrison\documents\visual studio 2013\Projects\PatternCalculator\PatternCalculator\obj\Debug\PatternCalculator.csprojResolveAssemblyReference.cache
 c:\users\devinharrison\documents\visual studio 2013\Projects\PatternCalculator\PatternCalculator\obj\Debug\PatternCalculator.exe
 c:\users\devinharrison\documents\visual studio 2013\Projects\PatternCalculator\PatternCalculator\obj\Debug\PatternCalculator.pdb
+C:\Users\devinharrison\Documents\GitHub\Pattern_Calculator\PatternCalculator\bin\Debug\PatternCalculator.exe.config
+C:\Users\devinharrison\Documents\GitHub\Pattern_Calculator\PatternCalculator\obj\Debug\PatternCalculator.exe
+C:\Users\devinharrison\Documents\GitHub\Pattern_Calculator\PatternCalculator\obj\Debug\PatternCalculator.pdb
