@@ -9,19 +9,20 @@ using PatternCalculator.Strategy;
 
 namespace PatternCalculator.Visitor
 {
+    using PatternCalculator.Data;
+
     class CalculationVisitor : IVisitor
     {
 
         public void Visit(BinOp b)
         {
             //Command hiding console writeline
-            Console.WriteLine("Answer: " + b.Eval());
+            CommandFactory.AddWriter("Answer: " + b.Eval()).Run();
+            Console.ReadLine();
+
         }
 
-        public void Visit(Calculator c)
-        {
-            Console.WriteLine("Your calculation is listed below:");
-        }
+     
 
     }
 }

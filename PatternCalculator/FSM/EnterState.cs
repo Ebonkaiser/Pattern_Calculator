@@ -34,7 +34,7 @@ namespace PatternCalculator.FSM
 
 
             CommandFactory.AddWriter("Choose from options below:").Run();
-            CommandFactory.AddWriter("1: Do calculation" + "\n" + "2: View past Calculations").Run();
+            CommandFactory.AddWriter("1: Do calculation" + "\n" + "2: View past Calculations" + "\n" + "3: Quit").Run();
             
             
             string s1 = Console.ReadLine();

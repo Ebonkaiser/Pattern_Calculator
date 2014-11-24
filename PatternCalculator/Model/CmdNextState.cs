@@ -3,16 +3,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PatternCalculator.Command;
+using PatternCalculator.Data;
+using PatternCalculator.FSM;
 
 namespace PatternCalculator.Model
 {
-    class CmdNextState
+  
+
+    class CmdNextState : ICommand
     {
         private CalcCollector _inventory;
 
-        public CmdNextState(CalcCollector c)
+        public CmdNextState()
         {
-            _inventory = c;
+            _inventory = CommandFactory.newInventory();
+        }
+
+        public bool Run()
+        {
+            State state = new State(_inventory);
+            state.Start();
+            return true;
         }
     }
 }

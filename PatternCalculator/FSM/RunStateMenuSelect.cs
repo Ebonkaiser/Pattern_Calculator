@@ -9,6 +9,8 @@ using PatternCalculator.Model;
 
 namespace PatternCalculator.FSM
 {
+    using System.Net.Mime;
+
     class RunStateMenuSelect : IState, IRun
     {
         private int selection;
@@ -39,7 +41,13 @@ namespace PatternCalculator.FSM
                 case 1: runCalculation = new RunStateCalculation(_inventory);
                     break;
                 case 2: ViewHistory = new RunStateViewHistory(_inventory);
-                    break;             
+                    break;
+                case 3:
+                        Environment.Exit(0);
+                    break;
+                default:
+                    CommandFactory.AddWriter("Invalid Entry").Run();
+                    break;
             }
         }
 
@@ -56,6 +64,10 @@ namespace PatternCalculator.FSM
             {
                 state.SetNextState(runCalculation);
                 state.ChangeState();
+            }
+            else if (runCalculation == null && ViewHistory == null)
+            {
+                state.SetNextState(new EnterState(_inventory));
             }
             
         }

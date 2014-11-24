@@ -45,7 +45,7 @@
     <Compile Include="Command\IWritableCommand.cs" />
     <Compile Include="Command\IGettableCommand.cs" />
     <Compile Include="Data\CommandFactory.cs" />
-    <Compile Include="Data\ExprFactory.cs" />
+    <Compile Include="Data\ObjectFactory.cs" />
     <Compile Include="FSM\EnterState.cs" />
     <Compile Include="FSM\RunStateCalculation.cs" />
     <Compile Include="FSM\RunStateMenuSelect.cs" />
@@ -60,7 +60,6 @@
     <Compile Include="Interface\IVisitor.cs" />
     <Compile Include="Main\Program.cs" />
     <Compile Include="Model\CalcCollector.cs" />
-    <Compile Include="Model\Calculator.cs" />
     <Compile Include="Model\CmdAdd.cs" />
     <Compile Include="Model\CmdClear.cs" />
     <Compile Include="Model\CmdDelete.cs" />

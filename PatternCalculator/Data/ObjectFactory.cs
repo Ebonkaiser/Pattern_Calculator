@@ -11,9 +11,9 @@ using PatternCalculator.Visitor;
 
 namespace PatternCalculator.Data
 {
-    class ExprFactory
+    class ObjectFactory
     {
-        private ExprFactory()
+        public ObjectFactory()
         {
         }
 
@@ -22,9 +22,12 @@ namespace PatternCalculator.Data
             return new Const(n);
         }
 
-        static public BinOp NewMult(IExpr l, IExpr r)
+       static public BinOp NewMult(IExpr l, IExpr r)
         {
-            return new BinOp(l, new Multiply(), r);
+            BinOp b = null;
+            b = new BinOp(l, new Multiply(), r);
+
+            return b;
         }
 
         static public BinOp NewPlus(IExpr l, IExpr r)

@@ -11,11 +11,11 @@ namespace PatternCalculator.Model
 {
     class CalcCollector : ICalcCollector
     {
-        private Queue<BinOp> _data;
+        private Stack<BinOp> _data;
        
         public CalcCollector()
         {
-            _data = new Queue<BinOp>();
+            _data = new Stack<BinOp>();
           
         }
 
@@ -28,7 +28,7 @@ namespace PatternCalculator.Model
 
         public BinOp Get()
         {
-            return _data.Dequeue();
+            return _data.Peek();
         }
 
         public void AddCalculation(BinOp _op)
@@ -38,14 +38,14 @@ namespace PatternCalculator.Model
                 throw new ArgumentNullException();
             }
 
-           _data.Enqueue(_op);
+           _data.Push(_op);
         }
 
        public BinOp RemoveCalculation()
         {
             if (_data.Count != 0)
             {
-                return _data.Dequeue();
+                return _data.Pop();
             }
             else
             {
@@ -58,12 +58,13 @@ namespace PatternCalculator.Model
 
         public string ListContents()
         {
-            string s = string.Empty;
+            StringBuilder sb = new StringBuilder();
+            
             foreach (BinOp b in _data)
             {
-                s = b.ToString();
+                sb.Append(b.ToString() + "\n");
             }
-            return s;
+            return sb.ToString();
         }
 
         internal void Clear()

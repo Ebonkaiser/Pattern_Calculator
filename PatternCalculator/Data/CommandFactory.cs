@@ -36,5 +36,10 @@ namespace PatternCalculator.Data
         {
             return new CmdClear(_inventory);
         }
+
+        internal static CmdNextState newCmdStartProgram()
+        {
+            return new CmdNextState();
+        }
     }
 }

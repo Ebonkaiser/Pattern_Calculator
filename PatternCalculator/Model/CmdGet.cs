@@ -19,7 +19,7 @@ namespace PatternCalculator.Model
 
         public BinOp Run()
         {
-            if (_inventory.Size() == 0)
+            if (_inventory.Size() != 0)
             {
                 return _inventory.Get();
             }

@@ -60,7 +60,7 @@ namespace PatternCalculator.FSM
                     //create calculation 
                     if (b != null){
                         //add calculationvisitor to factory
-                        b.Accept(ExprFactory.NewVisitor());
+                        b.Accept(ObjectFactory.NewVisitor());
                         //create add command to add calculation
                         CommandFactory.newCmdAdd(_inventory, b).Run();
                         //create command to remove calculation
@@ -89,7 +89,7 @@ namespace PatternCalculator.FSM
             state.SetNextState(new EnterState(_inventory));
             state.ChangeState();
         }
-        //TODO  finish running last calculations, create next state command, replace console writelines
+        //TODO  finish running last calculations object duplication in queue, make factory method?
 
 
         

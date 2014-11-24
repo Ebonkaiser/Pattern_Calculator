@@ -11,7 +11,7 @@ namespace PatternCalculator.Interface
     interface IVisitor
     {
         void Visit(BinOp b);
-        void Visit(Calculator c);
+       
       
     }
 }

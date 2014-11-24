@@ -18,6 +18,7 @@ namespace PatternCalculator.Strategy
        if ((l == null) || (op == null) || (r == null)) {
          throw new NoNullAllowedException();
       }
+            
          _op = op;
          _l = l;
           _r = r;
@@ -37,7 +38,7 @@ namespace PatternCalculator.Strategy
          visitor.Visit(this);
      }
 
-         public override string ToString()
+         public string ToString()
          {
              StringBuilder CB = new StringBuilder();
              CB.Append(_op.ToString());

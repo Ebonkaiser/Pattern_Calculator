@@ -15,7 +15,9 @@ namespace PatternCalculator
     {
        
 
-        //private IElement calculator = new Calculator();
+
+
+
         static void Main(string[] args)
         {
 
@@ -39,11 +41,15 @@ namespace PatternCalculator
          //IElement calculator = new Calculator(ExprFactory.NewConst(i1), ExprFactory.NewConst(i2));
 
          //calculator.Accept(new CalculationVisitor());
-            CalcCollector _inventory = CommandFactory.newInventory();
-            State state = new State(_inventory);
-            state.Start();
+           // CalcCollector _inventory = CommandFactory.newInventory();
+           // State state = new State(_inventory);
+            //state.Start();
 
-          Console.Read();
+
+
+          CommandFactory.newCmdStartProgram().Run();
+
+   
 
         }
     }

@@ -20,14 +20,6 @@ namespace PatternCalculator.Model
             return true;
         }
 
-        public void Undo()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Redo()
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }

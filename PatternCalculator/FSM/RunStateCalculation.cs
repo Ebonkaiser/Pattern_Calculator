@@ -60,7 +60,7 @@ namespace PatternCalculator.FSM
 
         private BinOp ReturnCalculation(int selection)
         {
-            BinOp op = null;
+           
             CommandFactory.AddWriter("X: ").Run();
             s1 = Console.ReadLine();
             if (s1 != null)
@@ -86,32 +86,32 @@ namespace PatternCalculator.FSM
             switch (selection)
             {
                 case 1:
-                    op = ExprFactory.NewPlus(ExprFactory.NewConst(x), ExprFactory.NewConst(y));
+                    BinOp op = ObjectFactory.NewPlus(ObjectFactory.NewConst(x), ObjectFactory.NewConst(y));
+                    return op;
                     break;
                 case 2:
-                    op = ExprFactory.NewMinus(ExprFactory.NewConst(x), ExprFactory.NewConst(y));
+                    BinOp op1 = ObjectFactory.NewMinus(ObjectFactory.NewConst(x), ObjectFactory.NewConst(y));
+                    return op1;
                     break;
                 case 3:
-                    op = ExprFactory.NewFactorial(ExprFactory.NewConst(x), ExprFactory.NewConst(y));
+                    BinOp op2 = ObjectFactory.NewFactorial(ObjectFactory.NewConst(x), ObjectFactory.NewConst(y));
+                    return op2;
                     break;
                 case 4:
-                    op = ExprFactory.NewPower(ExprFactory.NewConst(x), ExprFactory.NewConst(y));
+                    BinOp op3 = ObjectFactory.NewPower(ObjectFactory.NewConst(x), ObjectFactory.NewConst(y));
+                    return op3;
                     break;
                 case 5:
-                    op = ExprFactory.NewQuot(ExprFactory.NewConst(x), ExprFactory.NewConst(y));
+                    BinOp op4 = ObjectFactory.NewQuot(ObjectFactory.NewConst(x), ObjectFactory.NewConst(y));
+                    return op4;
                     break;
                 case 6:
-                    op = ExprFactory.NewMult(ExprFactory.NewConst(x), ExprFactory.NewConst(y));
+                    BinOp op5 = ObjectFactory.NewMult(ObjectFactory.NewConst(x), ObjectFactory.NewConst(y));
+                    return op5;
                     break;
             }
-            if (op != null)
-            {
-                return op;
-            }
-            else
-            {
-                throw new NullReferenceException();
-            }
+            return null;
+            
 
     }
 
